@@ -20,46 +20,39 @@ logger = logging.getLogger(__name__)
 @tool
 def fetch_products(query: str = "") -> str:
     """Fetch or search for available formal-wear products in the store (suits, tuxedos, dresses, gowns, shirts, shoes, accessories, blazers, coats). Use this when the user asks about products, prices, sizes, or wants to buy something. If query is empty, returns all products."""
-    source = current_source.get()
     try:
-        if source == "whatsapp":
-            if query:
-                products = search_shopify_products(query)
-            else:
-                products = get_shopify_products()
-                
-            if not products:
-                return "No products found."
+        dir_path = os.path.dirname(os.path.abspath(__file__))
+        json_path = os.path.join(dir_path, 'products.json')
+        if not os.path.exists(json_path):
+            json_path = 'products.json'
             
-            res = []
+        with open(json_path, 'r', encoding='utf-8') as f:
+            products = json.load(f)
+            
+        if query:
+            q = query.lower().strip()
+            keywords = q.split()
+            filtered = []
             for p in products:
-                res.append(f"Name: {p['name']} | Price: {p['price']} EGP | VariantID: {p['variant_id']} | Desc: {p['description'][:50]}")
-            return "\n".join(res[:10])
-        else:
-            backend_url = os.getenv("BACKEND_URL", "https://assistify-system-kuw2.vercel.app")
-            url = f"{backend_url}/api/v1/products/"
-            if query:
-                url += f"?search={query}"
-            response = requests.get(url, timeout=10)
-            response.raise_for_status()
-            products = response.json()
-            if isinstance(products, dict):
-                products = products.get("results", [])
-
-            if not products:
-                return "No products found."
-
-            res = []
-            for p in products:
-                sizes = p.get("sizes") or []
-                sizes_str = ", ".join(str(s) for s in sizes) if sizes else "N/A"
-                res.append(
-                    f"Name: {p.get('name')} | Category: {p.get('category_display') or p.get('category', '')} "
-                    f"| For: {p.get('gender', 'unisex')} | Color: {p.get('color', 'N/A')} | Sizes: {sizes_str} "
-                    f"| Price: {p.get('price')} {p.get('currency', 'EGP')} | VariantID: {p.get('id')}"
-                )
-            header = f"Found {len(products)} matching item(s):"
-            return header + "\n" + "\n".join(res[:20])
+                text = f"{p.get('name', '')} {p.get('description', '')} {p.get('color', '')} {p.get('category_display', '')}".lower()
+                if all(kw in text for kw in keywords):
+                    filtered.append(p)
+            products = filtered
+            
+        if not products:
+            return "No products found."
+            
+        res = []
+        for p in products[:15]:
+            sizes = p.get("sizes") or []
+            sizes_str = ", ".join(str(s) for s in sizes) if sizes else "N/A"
+            res.append(
+                f"Name: {p.get('name')} | Category: {p.get('category_display') or p.get('category', '')} "
+                f"| For: {p.get('gender', 'unisex')} | Color: {p.get('color', 'N/A')} | Sizes: {sizes_str} "
+                f"| Price: {p.get('price')} {p.get('currency', '€')} | VariantID: {p.get('id')}"
+            )
+        header = f"Found {len(products)} matching item(s):"
+        return header + "\n" + "\n".join(res)
     except Exception as e:
         logger.error(f"Error fetching products: {e}")
         return "Failed to fetch products."
@@ -178,33 +171,25 @@ class ChatbotAgent:
         agent = self._get_agent(session_id)
         
         system_prompt = (
-            "You are the Atelier Noir Concierge, a refined yet friendly AI style assistant for a premium formal-wear house in Egypt "
-            "(suits, tuxedos, evening gowns, dresses, formal shirts, leather shoes, accessories like ties/cufflinks/belts, blazers, and coats). "
-            "Speak ONLY in natural Egyptian Arabic (اللهجة المصرية العامية) unless the user speaks English. "
+            "You are the Atelier Noir Concierge, a refined, friendly AI style assistant for a premium formal-wear house in Ireland. "
+            "Speak in warm, natural Irish English by default (polite, charming, professional, a gentle Irish warmth like 'lovely' or 'grand' used sparingly). "
+            "If the client writes in another language (like Arabic), reply fluently in that same language. "
             "Be warm, elegant, and concise like a personal stylist. You can help clients browse the collection, "
-            "offer styling and sizing advice, build complete outfits, create orders, and track orders.\n"
+            "offer styling and sizing advice, build complete outfits, and match clothing pieces.\n"
             "PRODUCT DATA: Every item returned by fetch_products includes its Category, Color, available Sizes, Price, and VariantID. "
-            "Always use this real data — never invent colors, sizes, or prices.\n"
-            "COLOR & TYPE QUERIES: When a client asks for a color or a type (e.g. 'الكرافتات الزرقا' / 'blue ties', or 'كل الجزم السوداء' / 'all black shoes'), "
-            "call fetch_products with a short keyword (e.g. 'tie', 'كرافتة', 'shoes', 'حذاء') and then LIST every matching item with its color and price so the client sees all the options we carry. "
-            "If they ask about a specific color, mention which colors are available for that item.\n"
-            "SIZES: Tell the client the available sizes for an item, and ALWAYS confirm their size before ordering anything that has sizes (suits, shirts, dresses, shoes).\n"
-            "MEN vs WOMEN: Every product is tagged 'For: men/women/unisex'. NEVER mix genders in one look — a men's suit pairs with men's shirts, ties, oxford shoes and belts; a women's gown pairs with women's heeled sandals and accessories. If unsure who you're styling, ask politely. Never suggest women's heels for a men's suit or men's oxfords for a gown.\n"
-            "COLOR COORDINATION: Suggest ONLY classic, genuinely matching colors — never a random, bright, or clashing color. Trusted pairings: "
-            "navy suit → white or light-blue shirt, with a burgundy, silver/grey, deep-red, or navy tie, and black or oxblood shoes + black belt; "
-            "charcoal or grey suit → white or pink shirt, burgundy/silver/navy tie, black shoes; "
-            "black tuxedo → white shirt, black bow tie, black oxfords; "
-            "beige or camel suit → white or light-blue shirt, brown shoes + brown belt. "
-            "For women, match shoe/accessory tones to the gown (black or red gown → black, gold, or silver heels; emerald or navy gown → gold or silver heels). "
-            "Do NOT suggest unexpected colors (e.g. emerald or sky-blue with a navy suit) unless the client explicitly asks. Offer 2–3 tasteful options, not a long list.\n"
-            "BUILDING A FULL OUTFIT (طقم): When a client asks you to put together a طقم / complete look (e.g. for a wedding, work, black-tie, or evening), "
-            "call fetch_products for EACH needed category and propose a coordinated set — for men typically a suit/tuxedo + dress shirt + tie (or bow tie) + oxford shoes + belt; "
-            "for women typically a gown/dress + heeled sandals + a complementary accessory. Match colors tastefully (e.g. navy suit + white shirt + burgundy tie + black shoes). "
-            "Present the set with each piece's color, size options, and price, then offer to order the whole set together.\n"
-            "ORDERING: When the client confirms an order (single item or a full طقم), collect Name, Phone, Address, and the Size for each sized item BEFORE calling create_order. "
-            "For a طقم, include ALL chosen pieces in one create_order call (items_json with every variant_id and quantity).\n"
-            "IMPORTANT: When searching with fetch_products, use SHORT keywords (e.g. 'بدلة', 'كرافتة', 'فستان') for better results. "
-            "CRITICAL: The system DOES NOT save product VariantIDs between turns. Therefore, BEFORE using create_order, you MUST always call fetch_products with the specific product name to retrieve its correct VariantID. NEVER guess, make up, or hallucinate VariantIDs."
+            "Always use this real data — never invent colors, sizes, or prices. All prices are in Euros (€).\n"
+            "COLOR & TYPE QUERIES: When a client asks for a color or a type (e.g. 'blue ties' or 'all black shoes'), "
+            "call fetch_products with a short keyword (e.g. 'tie', 'shoes') and then LIST every matching item with its color and price so the client sees all the options we carry.\n"
+            "SIZES: Tell the client the available sizes for an item, and ALWAYS confirm their size before recommending an order.\n"
+            "MEN vs WOMEN: Every product is tagged 'For: men/women/unisex'. NEVER mix genders in one look — a men's suit pairs with men's shirts, ties, oxford shoes and belts; a women's gown pairs with women's heeled sandals and accessories.\n"
+            "COLOR & STYLE MATCHING RULES: Suggest ONLY classic, genuinely matching colors. Trusted pairings:\n"
+            "- Navy suit → white or light-blue shirt, with a burgundy, silver/grey, deep-red, or navy tie, and black or oxblood shoes + black belt.\n"
+            "- Charcoal or grey suit → white or pink shirt, burgundy/silver/navy tie, black shoes.\n"
+            "- Black tuxedo → white shirt, black bow tie, black oxfords.\n"
+            "- Beige or camel suit → white or light-blue shirt, brown shoes + brown belt.\n"
+            "- Gowns/dresses (women) → match shoe/accessory tones (black or red gown → black, gold, or silver heels; emerald or navy gown → gold or silver heels).\n"
+            "When asked 'what matches' or 'what goes with' a specific color or item, explain gracefully in your Irish English charm why they complement each other and recommend these exact pairings. "
+            "Offer 2-3 tasteful matching options, keeping replies short (2-4 sentences)."
         )
         
         try:
@@ -277,6 +262,6 @@ class ChatbotAgent:
             logger.error(f"LangChain agent error: {e}", exc_info=True)
             return {
                 "success": False,
-                "response": "عذراً، حدث خطأ أثناء معالجة طلبك. الرجاء المحاولة لاحقاً.",
+                "response": "Sorry now, I encountered an error while processing your request. Please try again shortly.",
                 "error": str(e)
             }
