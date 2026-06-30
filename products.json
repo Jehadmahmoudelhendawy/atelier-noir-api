@@ -1,0 +1,1108 @@
+[
+  {
+    "id": 261,
+    "name": "Navy Blue Two-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/navy-blue-two-piece-suit.jpg",
+    "price": 350.0,
+    "currency": "€",
+    "description": "A sharply tailored navy blue piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 262,
+    "name": "Charcoal Two-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Charcoal",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/charcoal-two-piece-suit.jpg",
+    "price": 350.0,
+    "currency": "€",
+    "description": "A sharply tailored charcoal piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 263,
+    "name": "Black Two-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/black-two-piece-suit.jpg",
+    "price": 350.0,
+    "currency": "€",
+    "description": "A sharply tailored black piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 264,
+    "name": "Light Grey Two-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Light Grey",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/light-grey-two-piece-suit.jpg",
+    "price": 350.0,
+    "currency": "€",
+    "description": "A sharply tailored light grey piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 265,
+    "name": "Beige Two-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Beige",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/beige-two-piece-suit.jpg",
+    "price": 350.0,
+    "currency": "€",
+    "description": "A sharply tailored beige piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 266,
+    "name": "Black Tuxedo",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/black-tuxedo.jpg",
+    "price": 499.0,
+    "currency": "€",
+    "description": "A sharply tailored black piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 267,
+    "name": "Midnight Blue Tuxedo",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Midnight Blue",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/midnight-blue-tuxedo.jpg",
+    "price": 499.0,
+    "currency": "€",
+    "description": "A sharply tailored midnight blue piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 268,
+    "name": "Navy Blue Three-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/navy-blue-three-piece-suit.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A sharply tailored navy blue piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 269,
+    "name": "Charcoal Three-Piece Suit",
+    "category": "suits",
+    "category_display": "Suits & Tuxedos",
+    "gender": "men",
+    "color": "Charcoal",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/charcoal-three-piece-suit.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A sharply tailored charcoal piece in premium wool — made for weddings, work and black-tie evenings."
+  },
+  {
+    "id": 270,
+    "name": "Navy Blue Tailored Blazer",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/navy-blue-tailored-blazer.jpg",
+    "price": 250.0,
+    "currency": "€",
+    "description": "A structured navy blue layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 271,
+    "name": "Black Tailored Blazer",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/black-tailored-blazer.jpg",
+    "price": 250.0,
+    "currency": "€",
+    "description": "A structured black layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 272,
+    "name": "Grey Tailored Blazer",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Grey",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/grey-tailored-blazer.jpg",
+    "price": 250.0,
+    "currency": "€",
+    "description": "A structured grey layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 273,
+    "name": "Burgundy Tailored Blazer",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Burgundy",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/burgundy-tailored-blazer.jpg",
+    "price": 250.0,
+    "currency": "€",
+    "description": "A structured burgundy layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 274,
+    "name": "Camel Wool Overcoat",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Camel",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/camel-wool-overcoat.jpg",
+    "price": 390.0,
+    "currency": "€",
+    "description": "A structured camel layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 275,
+    "name": "Charcoal Wool Overcoat",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Charcoal",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/charcoal-wool-overcoat.jpg",
+    "price": 390.0,
+    "currency": "€",
+    "description": "A structured charcoal layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 276,
+    "name": "Black Wool Overcoat",
+    "category": "outerwear",
+    "category_display": "Coats & Blazers",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "46",
+      "48",
+      "50",
+      "52",
+      "54",
+      "56"
+    ],
+    "image_url": "/products/black-wool-overcoat.jpg",
+    "price": 390.0,
+    "currency": "€",
+    "description": "A structured black layer that carries you from day to evening with ease."
+  },
+  {
+    "id": 277,
+    "name": "White Dress Shirt",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "men",
+    "color": "White",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image_url": "/products/white-dress-shirt.jpg",
+    "price": 70.0,
+    "currency": "€",
+    "description": "A crisp white essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 278,
+    "name": "Light Blue Dress Shirt",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "men",
+    "color": "Light Blue",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image_url": "/products/light-blue-dress-shirt.jpg",
+    "price": 70.0,
+    "currency": "€",
+    "description": "A crisp light blue essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 279,
+    "name": "Black Dress Shirt",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image_url": "/products/black-dress-shirt.jpg",
+    "price": 70.0,
+    "currency": "€",
+    "description": "A crisp black essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 280,
+    "name": "Pink Dress Shirt",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "men",
+    "color": "Pink",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image_url": "/products/pink-dress-shirt.jpg",
+    "price": 70.0,
+    "currency": "€",
+    "description": "A crisp pink essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 281,
+    "name": "Lavender Dress Shirt",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "men",
+    "color": "Lavender",
+    "sizes": [
+      "S",
+      "M",
+      "L",
+      "XL",
+      "XXL"
+    ],
+    "image_url": "/products/lavender-dress-shirt.jpg",
+    "price": 70.0,
+    "currency": "€",
+    "description": "A crisp lavender essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 282,
+    "name": "White Silk Blouse",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "women",
+    "color": "White",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/white-silk-blouse.jpg",
+    "price": 95.0,
+    "currency": "€",
+    "description": "A crisp white essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 283,
+    "name": "Black Silk Blouse",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "women",
+    "color": "Black",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/black-silk-blouse.jpg",
+    "price": 95.0,
+    "currency": "€",
+    "description": "A crisp black essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 284,
+    "name": "Champagne Silk Blouse",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "women",
+    "color": "Champagne",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/champagne-silk-blouse.jpg",
+    "price": 95.0,
+    "currency": "€",
+    "description": "A crisp champagne essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 285,
+    "name": "Burgundy Silk Blouse",
+    "category": "shirts",
+    "category_display": "Shirts & Blouses",
+    "gender": "women",
+    "color": "Burgundy",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/burgundy-silk-blouse.jpg",
+    "price": 95.0,
+    "currency": "€",
+    "description": "A crisp burgundy essential in fine fabric — the foundation of a polished look."
+  },
+  {
+    "id": 286,
+    "name": "Black Evening Gown",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Black",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/black-evening-gown.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A flowing black gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 287,
+    "name": "Red Evening Gown",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Red",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/red-evening-gown.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A flowing red gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 288,
+    "name": "Emerald Evening Gown",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Emerald",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/emerald-evening-gown.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A flowing emerald gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 289,
+    "name": "Navy Blue Evening Gown",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Navy Blue",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/navy-blue-evening-gown.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A flowing navy blue gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 290,
+    "name": "Burgundy Evening Gown",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Burgundy",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/burgundy-evening-gown.jpg",
+    "price": 450.0,
+    "currency": "€",
+    "description": "A flowing burgundy gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 291,
+    "name": "Black Cocktail Dress",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Black",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/black-cocktail-dress.jpg",
+    "price": 240.0,
+    "currency": "€",
+    "description": "A flowing black gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 292,
+    "name": "Red Cocktail Dress",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Red",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/red-cocktail-dress.jpg",
+    "price": 240.0,
+    "currency": "€",
+    "description": "A flowing red gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 293,
+    "name": "Royal Blue Cocktail Dress",
+    "category": "dresses",
+    "category_display": "Evening Dresses & Gowns",
+    "gender": "women",
+    "color": "Royal Blue",
+    "sizes": [
+      "XS",
+      "S",
+      "M",
+      "L",
+      "XL"
+    ],
+    "image_url": "/products/royal-blue-cocktail-dress.jpg",
+    "price": 240.0,
+    "currency": "€",
+    "description": "A flowing royal blue gown with a refined silhouette, made to turn heads."
+  },
+  {
+    "id": 294,
+    "name": "Black Oxford Shoes",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image_url": "/products/black-oxford-shoes.jpg",
+    "price": 180.0,
+    "currency": "€",
+    "description": "Hand-finished black footwear to complete a formal look."
+  },
+  {
+    "id": 295,
+    "name": "Oxblood Oxford Shoes",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "men",
+    "color": "Oxblood",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image_url": "/products/oxblood-oxford-shoes.jpg",
+    "price": 180.0,
+    "currency": "€",
+    "description": "Hand-finished oxblood footwear to complete a formal look."
+  },
+  {
+    "id": 296,
+    "name": "Brown Oxford Shoes",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "men",
+    "color": "Brown",
+    "sizes": [
+      "40",
+      "41",
+      "42",
+      "43",
+      "44",
+      "45"
+    ],
+    "image_url": "/products/brown-oxford-shoes.jpg",
+    "price": 180.0,
+    "currency": "€",
+    "description": "Hand-finished brown footwear to complete a formal look."
+  },
+  {
+    "id": 297,
+    "name": "Black Heeled Sandals",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "women",
+    "color": "Black",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_url": "/products/black-heeled-sandals.jpg",
+    "price": 130.0,
+    "currency": "€",
+    "description": "Hand-finished black footwear to complete a formal look."
+  },
+  {
+    "id": 298,
+    "name": "Nude Heeled Sandals",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "women",
+    "color": "Nude",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_url": "/products/nude-heeled-sandals.jpg",
+    "price": 130.0,
+    "currency": "€",
+    "description": "Hand-finished nude footwear to complete a formal look."
+  },
+  {
+    "id": 299,
+    "name": "Gold Heeled Sandals",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "women",
+    "color": "Gold",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_url": "/products/gold-heeled-sandals.jpg",
+    "price": 130.0,
+    "currency": "€",
+    "description": "Hand-finished gold footwear to complete a formal look."
+  },
+  {
+    "id": 300,
+    "name": "Silver Heeled Sandals",
+    "category": "footwear",
+    "category_display": "Formal Footwear",
+    "gender": "women",
+    "color": "Silver",
+    "sizes": [
+      "36",
+      "37",
+      "38",
+      "39",
+      "40",
+      "41"
+    ],
+    "image_url": "/products/silver-heeled-sandals.jpg",
+    "price": 130.0,
+    "currency": "€",
+    "description": "Hand-finished silver footwear to complete a formal look."
+  },
+  {
+    "id": 301,
+    "name": "Navy Blue Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/navy-blue-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined navy blue finishing touch for any formal outfit."
+  },
+  {
+    "id": 302,
+    "name": "Royal Blue Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Royal Blue",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/royal-blue-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined royal blue finishing touch for any formal outfit."
+  },
+  {
+    "id": 303,
+    "name": "Sky Blue Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Sky Blue",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/sky-blue-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined sky blue finishing touch for any formal outfit."
+  },
+  {
+    "id": 304,
+    "name": "Burgundy Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Burgundy",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/burgundy-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined burgundy finishing touch for any formal outfit."
+  },
+  {
+    "id": 305,
+    "name": "Black Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/black-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined black finishing touch for any formal outfit."
+  },
+  {
+    "id": 306,
+    "name": "Silver Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Silver",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/silver-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined silver finishing touch for any formal outfit."
+  },
+  {
+    "id": 307,
+    "name": "Emerald Silk Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Emerald",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/emerald-silk-tie.jpg",
+    "price": 30.0,
+    "currency": "€",
+    "description": "A refined emerald finishing touch for any formal outfit."
+  },
+  {
+    "id": 308,
+    "name": "Black Bow Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/black-bow-tie.jpg",
+    "price": 25.0,
+    "currency": "€",
+    "description": "A refined black finishing touch for any formal outfit."
+  },
+  {
+    "id": 309,
+    "name": "Navy Blue Bow Tie",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/navy-blue-bow-tie.jpg",
+    "price": 25.0,
+    "currency": "€",
+    "description": "A refined navy blue finishing touch for any formal outfit."
+  },
+  {
+    "id": 310,
+    "name": "Silver Cufflinks",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Silver",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/silver-cufflinks.jpg",
+    "price": 45.0,
+    "currency": "€",
+    "description": "A refined silver finishing touch for any formal outfit."
+  },
+  {
+    "id": 311,
+    "name": "Gold Cufflinks",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Gold",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/gold-cufflinks.jpg",
+    "price": 45.0,
+    "currency": "€",
+    "description": "A refined gold finishing touch for any formal outfit."
+  },
+  {
+    "id": 312,
+    "name": "Onyx Black Cufflinks",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Onyx Black",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/onyx-black-cufflinks.jpg",
+    "price": 45.0,
+    "currency": "€",
+    "description": "A refined onyx black finishing touch for any formal outfit."
+  },
+  {
+    "id": 313,
+    "name": "Black Leather Belt",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Black",
+    "sizes": [
+      "90",
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "image_url": "/products/black-leather-belt.jpg",
+    "price": 50.0,
+    "currency": "€",
+    "description": "A refined black finishing touch for any formal outfit."
+  },
+  {
+    "id": 314,
+    "name": "Brown Leather Belt",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Brown",
+    "sizes": [
+      "90",
+      "95",
+      "100",
+      "105",
+      "110"
+    ],
+    "image_url": "/products/brown-leather-belt.jpg",
+    "price": 50.0,
+    "currency": "€",
+    "description": "A refined brown finishing touch for any formal outfit."
+  },
+  {
+    "id": 315,
+    "name": "White Pocket Square",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "White",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/white-pocket-square.jpg",
+    "price": 18.0,
+    "currency": "€",
+    "description": "A refined white finishing touch for any formal outfit."
+  },
+  {
+    "id": 316,
+    "name": "Navy Blue Pocket Square",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Navy Blue",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/navy-blue-pocket-square.jpg",
+    "price": 18.0,
+    "currency": "€",
+    "description": "A refined navy blue finishing touch for any formal outfit."
+  },
+  {
+    "id": 317,
+    "name": "Burgundy Pocket Square",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "men",
+    "color": "Burgundy",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/burgundy-pocket-square.jpg",
+    "price": 18.0,
+    "currency": "€",
+    "description": "A refined burgundy finishing touch for any formal outfit."
+  },
+  {
+    "id": 318,
+    "name": "Grey Cashmere Scarf",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "unisex",
+    "color": "Grey",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/grey-cashmere-scarf.jpg",
+    "price": 90.0,
+    "currency": "€",
+    "description": "A refined grey finishing touch for any formal outfit."
+  },
+  {
+    "id": 319,
+    "name": "Camel Cashmere Scarf",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "unisex",
+    "color": "Camel",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/camel-cashmere-scarf.jpg",
+    "price": 90.0,
+    "currency": "€",
+    "description": "A refined camel finishing touch for any formal outfit."
+  },
+  {
+    "id": 320,
+    "name": "Black Cashmere Scarf",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "unisex",
+    "color": "Black",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/black-cashmere-scarf.jpg",
+    "price": 90.0,
+    "currency": "€",
+    "description": "A refined black finishing touch for any formal outfit."
+  },
+  {
+    "id": 321,
+    "name": "Burgundy Cashmere Scarf",
+    "category": "accessories",
+    "category_display": "Accessories",
+    "gender": "unisex",
+    "color": "Burgundy",
+    "sizes": [
+      "One Size"
+    ],
+    "image_url": "/products/burgundy-cashmere-scarf.jpg",
+    "price": 90.0,
+    "currency": "€",
+    "description": "A refined burgundy finishing touch for any formal outfit."
+  }
+]

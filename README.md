@@ -1,62 +1,47 @@
-# Atelier Noir — API (demo instance)
+# Atelier Noir AI Concierge API
 
-A standalone copy of the **backend** (Django) and the **chatbot** (FastAPI +
-OpenRouter) for the Atelier Noir formal-wear store. This repo is meant to be
-deployed as its **own** pair of Vercel projects with its **own database**, so it
-is fully independent of the original production deployment.
+This is the serverless API backend for the Atelier Noir AI Concierge, optimized to run natively on **Vercel** with zero setup.
 
-```
-backend/             Django REST API (products, orders, chat proxy)
-assistify_chatbot/   FastAPI AI concierge (OpenRouter tool-calling agent)
-```
+## Features
+- **Irish English Tone**: Converses in warm, charming, and professional Irish English by default.
+- **Color & Style Matchmaker**: Mentions and matches matching items in the catalog (e.g. matching navy suits with ties/pocket squares, matching beige suits with brown leather belts/shoes).
+- **No Cold Starts**: Written in pure Node.js serverless functions with zero dependencies (using built-in fetch).
+- **CORS Enabled**: Automatically handles cross-origin requests from any frontend.
 
-The demo **frontend** is a static build hosted separately (e.g. HostGator);
-point it at this backend by editing its `config.js`.
+## Project Structure
+- `/api/chat.js`: The main serverless function endpoint.
+- `products.json`: The product catalogue database (prices in €).
 
 ---
 
-## Deploy on Vercel (same account, two new projects)
+## How to Push to GitHub
 
-### 1) Backend  →  new Vercel project, **Root Directory = `backend`**
-Create a fresh Postgres DB first, then set these env vars (Production):
-
-| Variable | Value |
-|---|---|
-| `DB_NAME` `DB_USER` `DB_PASSWORD` `DB_HOST` `DB_PORT` | the new database |
-| `SECRET_KEY` | any long random string |
-| `SEED_SECRET` | a strong secret (used once, then delete) |
-| `MICROSERVICE_URL` | the chatbot URL from step 2 + `/chat` |
-| `OPENROUTER_API_KEY` | (optional) only if needed server-side |
-
-Deploy, then **seed the catalog** (migrate + 61 formal products w/ colors,
-sizes, images, offers):
+Run these commands in your terminal inside the `atelier-noir-api` directory to push the code to your GitHub repository:
 
 ```bash
-curl -X POST https://<NEW-BACKEND>.vercel.app/api/v1/products/admin/seed/ \
-  -H "X-Seed-Secret: <SEED_SECRET>"
+# Add all files
+git add .
+
+# Commit changes
+git commit -m "Initialize Atelier Noir chatbot API with Irish English tone and Vercel compatibility"
+
+# Push to your repository
+git branch -M master
+git push -u origin master
 ```
 
-Expect `{"success": true, "product_count": 61}`. Then **remove `SEED_SECRET`**
-and redeploy to close the endpoint.
+---
 
-### 2) Chatbot  →  new Vercel project, **Root Directory = `assistify_chatbot`**
+## How to Deploy on Vercel
 
-| Variable | Value |
-|---|---|
-| `OPENROUTER_API_KEY` | your OpenRouter key |
-| `BACKEND_URL` | the backend URL from step 1 (e.g. `https://<NEW-BACKEND>.vercel.app`) |
-
-### 3) Wire them together
-- Backend env `MICROSERVICE_URL` = `https://<NEW-CHATBOT>.vercel.app/chat`
-- Chatbot env `BACKEND_URL` = `https://<NEW-BACKEND>.vercel.app`
-- Demo frontend `config.js` → `window.__API_BASE__ = "https://<NEW-BACKEND>.vercel.app/api/v1";`
-
-```
-demo frontend ──▶ backend (this repo) ──MICROSERVICE_URL──▶ chatbot (this repo)
-                      │                                          │
-                  new database                              BACKEND_URL ──▶ backend
-                                                            OPENROUTER_API_KEY
-```
-
-Product images are served by the static demo frontend at `/products/<slug>.jpg`;
-this backend only stores those relative paths.
+1. Go to [Vercel Dashboard](https://vercel.com/dashboard) and click **"Add New"** > **"Project"**.
+2. Import your repository **`atelier-noir-api`** from your GitHub account.
+3. In the **Environment Variables** section, add your OpenRouter API key:
+   - **Key**: `OPENROUTER_API_KEY`
+   - **Value**: `sk-or-v1-...` (your actual OpenRouter API key)
+4. Click **Deploy**.
+5. Once deployed, copy your deployment domain URL (e.g., `https://atelier-noir-api.vercel.app`).
+6. Update your frontend's `config.js` to point to the new Vercel API:
+   ```javascript
+   window.__CHAT_API__ = "https://your-project-name.vercel.app/api/chat";
+   ```
