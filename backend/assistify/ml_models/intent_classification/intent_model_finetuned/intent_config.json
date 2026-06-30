@@ -1,0 +1,25 @@
+{
+  "intent_map": {
+    "inquiry": 0,
+    "greeting": 1,
+    "offer": 2,
+    "order_tracking": 3,
+    "payment": 4,
+    "return": 5,
+    "product_search": 6,
+    "purchase": 7,
+    "complaint": 8,
+    "support": 9,
+    "feedback": 10,
+    "goodbye": 11,
+    "recommendation_request": 12,
+    "introduce_name": 13,
+    "memory_check": 14,
+    "product_details": 15,
+    "recommendation_reasoning": 16,
+    "confirmation": 17
+  },
+  "num_labels": 18,
+  "model_name": "UBC-NLP/MARBERTv2",
+  "best_val_acc": 0.9866666666666667
+}

@@ -1,0 +1,20 @@
+## Core Django & API
+asgiref==3.8.1
+Django==5.0.6
+django-cors-headers==4.4.0
+djangorestframework==3.15.2
+djangorestframework-simplejwt==5.3.1
+psycopg2-binary
+python-decouple==3.8
+sqlparse==0.5.0
+
+## Utilities
+Pillow==10.4.0
+requests>=2.31.0
+tqdm>=4.65.0
+python-dateutil>=2.8.2
+PyJWT>=2.8.0
+python-dotenv
+twilio==8.10.0
+
+whitenoise==6.7.0

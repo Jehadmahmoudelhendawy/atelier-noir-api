@@ -1,0 +1,34 @@
+# Python / Django
+__pycache__/
+*.py[cod]
+*.sqlite3
+db.sqlite3
+.env
+.env.*
+*.log
+venv/
+env/
+.venv/
+staticfiles/
+media/
+
+# ML / model binaries
+models/
+checkpoints/
+*.pt
+*.pth
+*.bin
+*.h5
+*.ckpt
+*.safetensors
+.cache/
+
+# Node
+node_modules/
+
+# OS / IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+.claude/
