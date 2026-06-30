@@ -1,0 +1,9 @@
+{
+  "name": "atelier-noir-api",
+  "version": "1.0.0",
+  "description": "Atelier Noir AI Concierge API",
+  "type": "module",
+  "engines": {
+    "node": ">=18"
+  }
+}

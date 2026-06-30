@@ -1,5 +1,9 @@
 import fs from 'fs';
 import path from 'path';
+import { fileURLToPath } from 'url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const COLORS = {
   'Navy Blue': ['كحلي','كحلية','navy'], 'Midnight Blue': ['ليلي','midnight'], 'Royal Blue': ['ملكي','royal'],
@@ -197,14 +201,20 @@ export default async function handler(req, res) {
     return res.status(422).json({ error: 'message is required' });
   }
 
-  // Load products catalog
+  // Load products catalog — look next to /api/chat.js, then project root
   let products = [];
-  try {
-    const productsPath = path.join(process.cwd(), 'products.json');
-    products = JSON.parse(fs.readFileSync(productsPath, 'utf8'));
-  } catch (err) {
-    console.error('Failed to load products.json:', err);
+  const candidatePaths = [
+    path.join(__dirname, '..', 'products.json'),
+    path.join(process.cwd(), 'products.json'),
+    path.join(__dirname, 'products.json'),
+  ];
+  for (const p of candidatePaths) {
+    try {
+      products = JSON.parse(fs.readFileSync(p, 'utf8'));
+      if (products.length > 0) break;
+    } catch (_) {}
   }
+  if (products.length === 0) console.error('products.json not found in any candidate path');
 
   // Generate catalog summary for the LLM
   const byCat = {};
@@ -243,7 +253,7 @@ ${catalog}`;
 
   let reply = '';
 
-  if (OPENROUTER_API_KEY && OPENROUTER_API_KEY.startsWith('sk-or-')) {
+  if (OPENROUTER_API_KEY) {
     try {
       const response = await fetch('https://openrouter.ai/api/v1/chat/completions', {
         method: 'POST',
