@@ -227,31 +227,30 @@ export default async function handler(req, res) {
   const catalog = catLines.join('\n');
 
   const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || '';
-  const OPENROUTER_MODEL = 'google/gemini-2.5-flash';
+  const OPENROUTER_MODEL = 'openai/gpt-4o-mini';
 
-  const systemPrompt = `You are the Atelier Noir Concierge, a refined, friendly AI stylist for a premium formal-wear house.
-Speak in warm, natural Irish English by default (polite, charming, professional, a gentle Irish warmth like 'lovely' or 'grand' used sparingly).
-If the client writes in another language, reply fluently in that same language.
-Write plain text only, never use markdown or symbols like _ or *.
-Only mention items and colours that exist in the catalogue below; never invent products or prices.
-Never mix men's and women's pieces in one look.
+  const systemPrompt = `CRITICAL RULE — READ THIS FIRST:
+You are the Atelier Noir Concierge. You MUST reply ONLY in English. NEVER write Arabic. NEVER write any language other than English. If the customer writes in Arabic or any other language, you still reply in English only. This is non-negotiable.
 
-CLOTHING MATCHING RULES:
-When the client asks what matches, goes with, or complements a specific item or color:
-1. Recommend matching items that exist in our catalogue.
-2. Follow classic matching guidelines:
-   - Navy suit matches with white/light-blue shirts, burgundy/silver/navy ties, and black/oxblood footwear.
-   - Beige suit matches with white/light-blue shirts, brown belts, and brown/tan footwear.
-   - Black tuxedo matches with white dress shirts, black bow ties, and black oxford shoes.
-   - For evening gowns, recommend matching accessories like pocket squares or colors for partners (e.g. emerald gown matches navy suit with emerald tie/pocket square).
-3. Explain gracefully why these choices match so well in your Irish English charm.
+You are a refined, charming personal stylist based in Dublin, Ireland. Your tone is warm Irish English — polite, elegant, and gently witty — like a well-spoken Dublin tailor. You may use Irish expressions like "lovely", "grand", "sure", "class", "you'll look a treat" very sparingly.
 
-Offer 2-3 tasteful options and keep replies short (2-4 sentences).
+STRICT RULES:
+- Write plain text ONLY. No markdown. No asterisks (*). No underscores (_). No bullet points.
+- NEVER invent products, colours, or prices. Use ONLY items from the catalogue below.
+- NEVER mix men's and women's pieces in one outfit.
+- Prices are in Euro (€). Do NOT mention Egyptian pounds or any other currency.
+- Keep replies to 2–4 short sentences. Offer 2–3 tasteful options.
+- For colour matching: navy suit → white/light-blue shirt, burgundy/silver/navy tie, black/oxblood shoes. Beige suit → white shirt, brown belt, tan/brown shoes. Black tuxedo → white shirt, black bow tie, black oxfords.
 
 AVAILABLE CATALOGUE (category (gender): colours):
 ${catalog}`;
 
   let reply = '';
+
+  const hasArabic = /[\u0600-\u06FF]/.test(cleanMessage);
+  const userContent = hasArabic 
+    ? "[IMPORTANT: Respond in English only, not Arabic]\n" + cleanMessage 
+    : cleanMessage;
 
   if (OPENROUTER_API_KEY) {
     try {
@@ -260,15 +259,18 @@ ${catalog}`;
         headers: {
           'Content-Type': 'application/json',
           'Authorization': `Bearer ${OPENROUTER_API_KEY}`,
+          'Accept-Language': 'en-IE, en;q=0.9',
+          'X-Title': 'Atelier Noir Dublin',
         },
         body: JSON.stringify({
           model: OPENROUTER_MODEL,
           messages: [
             { role: 'system', content: systemPrompt },
-            { role: 'user', content: cleanMessage }
+            { role: 'user', content: userContent },
+            { role: 'assistant', content: 'Certainly!' }
           ],
-          temperature: 0.4,
-          max_tokens: 500,
+          temperature: 0.3,
+          max_tokens: 400,
         }),
       });
 
@@ -284,7 +286,11 @@ ${catalog}`;
   }
 
   // Remove markdown symbols
-  reply = reply.replace(/[\*_]/g, '');
+  reply = reply.replace(/[\*_#]/g, '');
+
+  if (/[\u0600-\u06FF]/.test(reply)) {
+    reply = ''; // Fallback to local logic if Arabic is detected
+  }
 
   const matched = matchProducts(cleanMessage, reply, products, null);
 
